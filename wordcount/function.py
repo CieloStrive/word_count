@@ -8,6 +8,7 @@ def home(request):#request固定，代表用户请求，也就是前面的urls�
     return render(request,'home.html')
     #创建一个网页，一般设置一个template文件夹放网页模板
     #同时要去setting.py里找到TEMPLATES，设置指定目录寻找网页
+
 def count(request):
     user_text =request.GET['text'] #得到text文本框里的内容
     total_count = len( user_text ) #得到长度
@@ -28,3 +29,6 @@ def count(request):
                   {'count': total_count , 'text': user_text ,
                    'dict': word_dict , 'sorted': sorted_dict })
     #以字典的方式传递给html  字典里面可以放字典
+
+def about(request):
+    return render(request,'about.html')

@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls), #link match pattern of 'admin/',start admin.site.urls
     path('', function.home),#注意逗号不能丢 #符合模式，启用function文件里的home函数
     path('count/', function.count),
+    path('about/', function.about),
 ]
